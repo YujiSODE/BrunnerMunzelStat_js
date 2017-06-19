@@ -8,3 +8,5 @@ https://github.com/YujiSODE/BrunnerMunzelStat_js
 ______
 
 ## Script
+- `BrunnerMunzelStat_js.js`  
+  Function: `BMStat(X,Y)`; `X` and `Y` are numerical arrays.
