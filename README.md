@@ -1,2 +1,10 @@
 # BrunnerMunzelStat_js
-This function estimates value of statistic used in "Brunner Munzel test" with given two sample arrays.
+This function estimates value of statistic used in "Brunner Munzel test" with given two sample arrays.  
+https://github.com/YujiSODE/
+
+>Copyright (c) 2017 Yuji SODE \<yuji.sode@gmail.com\>  
+>This software is released under the MIT License.  
+>See LICENSE or http://opensource.org/licenses/mit-license.php
+______
+
+## Script
