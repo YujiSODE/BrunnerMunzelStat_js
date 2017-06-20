@@ -16,6 +16,11 @@ This function rettuns object with three values: `statistic`, `estP` and `df`.
 - `estP`: estimated value `P = P(X<Y)+P(X=Y)/2`
 - `df`: degrees of freedom for approximation by t-distribution
 
+## Example data cited from Brunner and Munzel (2000)
+`var v1=[1,2,1,1,1,1,1,1,1,1,2,4,1,1],v2=[3,3,4,3,1,2,3,1,1,5,4];`  
+`BMStat(v1,v2);`  
+Result: `{ statistic: 3.1374674823029514, estP: 0.7889610389610391, df: 17.682841979481548 }`
+
 ## References and Library
 ### References cited
 - Brunner, E. and Munzel, U. 2000. The Nonparametric Behrens-Fisher Problem: Asymptotic Theory and a Small-Sample Approximation. Biometrical Jour. vol. 42, p. 17-25.
