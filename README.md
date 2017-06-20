@@ -10,3 +10,8 @@ ______
 ## Script
 - `BrunnerMunzelStat_js.js`  
   Function: `BMStat(X,Y)`; `X` and `Y` are numerical arrays.
+
+This function rettuns object with three values: `statistic`, `estP` and `df`.
+- `statistic`: value of statistic
+- `estP`: estimated value P = P(X<Y)+P(X=Y)/2
+- `df`: degrees of freedom for approximation by t-distribution
