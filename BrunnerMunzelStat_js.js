@@ -31,16 +31,14 @@ function BMStat(X,Y){
         * - (rkX|rkY) is averaged rank of (x|y) in xy
         * - pEst: estimated value P = P(X<Y)+P(X=Y)/2
         * - w: value of statistic
+        * - df: degrees of freedom for approximation by t-distribution
         */
-        rkX=0,rkY=0,pEst=0,w=0;
+        rkX=0,rkY=0,pEst=0,w=0,df=0,sigSub=0;
     //============================================================================
-    /* ====== "stRank.js" Copyright (c) 2017 Yuji SODE <yuji.sode@gmail.com> ======
-    *    This software is released under the MIT License. See LICENSE or http://opensource.org/licenses/mit-license.php
-    *    https://gist.github.com/YujiSODE/f913c0c2cf49353e561cd03c2a7a8a6b
-    */
+    //====== stRank.js (Yuji SODE,2017): the MIT License; https://gist.github.com/YujiSODE/f913c0c2cf49353e561cd03c2a7a8a6b ======
     //it returns a rank object available for the statistical rank test, by a given array A.
     rk=function(A){var i=0,j=0,s=0,Oe,N=A.length,O={},slf=window,B=slf.JSON.parse(slf.JSON.stringify(A)).sort(function(a,b){return a-b;});while(i<N){if(!O[B[i]]){O[B[i]]=[i+1,1,i+1];}else{O[B[i]][1]+=1;}i+=1;}for(var el in O){Oe=O[el];if(Oe[1]>1){j=0,s=0;while(j<Oe[1]){s+=Oe[0]+j,j+=1;}Oe[2]=s/Oe[1];}}return O;};
-    /* ====== "stRank.js" Copyright (c) 2017 Yuji SODE (the MIT License) ======*/
+    //====== stRank.js (Yuji SODE,2017): the MIT License ======
     /*
     * this function returns averaged rank of A; the rank defined by rank object
     * - A: numerical array
@@ -81,14 +79,16 @@ function BMStat(X,Y){
     //=== value of statistic w ===
     //w=(rkY-rkX)/(Math.sqrt(N)*Math.sqrt(sigma2));
     w=Math.sqrt(N)*(pEst-0.5)/Math.sqrt(sigma2);
+    //=== degrees of freedom for t-distribution ===
+    sigSub=(sigmaX2/Nx)+(sigmaY2/Ny);
+    df=sigSub*sigSub/((sigmaX2/Nx)*(sigmaX2/Nx)/(Nx-1)+(sigmaY2/Ny)*(sigmaY2/Ny)/(Ny-1));
     /*
     * returned object has three values:
     * - statistic: value of statistic
     * - estP: estimated value P = P(X<Y)+P(X=Y)/2
     * - df: degrees of freedom for approximation by t-distribution
     */
-    //to do: df
-    return {statistic:w,estP:pEst,df:0};
+    return {statistic:w,estP:pEst,df:df};
 }
 /*
 * === References cited ===
@@ -98,7 +98,7 @@ function BMStat(X,Y){
 * === Library ===
 * - stRank.js (Yuji SODE,2017): the MIT License; https://gist.github.com/YujiSODE/f913c0c2cf49353e561cd03c2a7a8a6b
 */
-//example
+//=== example data cited from Brunner and Munzel (2000) ===
 //var v1=[1,2,1,1,1,1,1,1,1,1,2,4,1,1],v2=[3,3,4,3,1,2,3,1,1,5,4];
 //BMStat(v1,v2);
-//{ statistic: 3.1374674823029514, estP: 0.7889610389610391, df: 0 }
+//result: { statistic: 3.1374674823029514, estP: 0.7889610389610391, df: 17.682841979481548 }
