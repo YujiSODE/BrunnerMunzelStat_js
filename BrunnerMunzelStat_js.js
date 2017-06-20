@@ -98,7 +98,7 @@ function BMStat(X,Y){
 * === Library ===
 * - stRank.js (Yuji SODE,2017): the MIT License; https://gist.github.com/YujiSODE/f913c0c2cf49353e561cd03c2a7a8a6b
 */
-//example
+//=== example data cited from Brunner and Munzel (2000) ===
 //var v1=[1,2,1,1,1,1,1,1,1,1,2,4,1,1],v2=[3,3,4,3,1,2,3,1,1,5,4];
 //BMStat(v1,v2);
-//{ statistic: 3.1374674823029514, estP: 0.7889610389610391, df: 17.682841979481548 }
+//result: { statistic: 3.1374674823029514, estP: 0.7889610389610391, df: 17.682841979481548 }
