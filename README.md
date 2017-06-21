@@ -6,6 +6,8 @@ https://github.com/YujiSODE/BrunnerMunzelStat_js
 >This software is released under the MIT License.  
 >See LICENSE or http://opensource.org/licenses/mit-license.php
 ______
+According to Brunner and Munzel (2000), a value of estimated statistic in this method follows the standard normal distribution asymptotically; this distribution can be approximated to *t*-distribution when *n*<sub>1</sub> and *n*<sub>2</sub> are not less than 10,  
+while whole sample size *N* =*n*<sub>1</sub>+*n*<sub>2</sub>.
 
 ## Script
 - `BrunnerMunzelStat_js.js`  
