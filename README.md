@@ -24,7 +24,7 @@ Result: `{ statistic: 3.1374674823029514, estP: 0.7889610389610391, df: 17.68284
 ## References and Library
 ### References cited
 - Brunner, E. and Munzel, U. 2000. The Nonparametric Behrens-Fisher Problem: Asymptotic Theory and a Small-Sample Approximation. Biometrical Jour. vol. 42, p. 17-25.
-- [brunner.munzel.test](https://www.rdocumentation.org/packages/lawstat/versions/3.1/topics/brunner.munzel.test) derived on [2017-06-19]
+- R Documentation [brunner.munzel.test](https://www.rdocumentation.org/packages/lawstat/versions/3.1/topics/brunner.munzel.test) derived on [2017-06-19]
 - [Brunner-Munzel test \(in Japanese\)](https://oku.edu.mie-u.ac.jp/~okumura/stat/brunner-munzel.html) derived on [2017-06-19]
 ### Library
 - stRank.js (Yuji SODE,2017): the MIT License; https://gist.github.com/YujiSODE/f913c0c2cf49353e561cd03c2a7a8a6b
